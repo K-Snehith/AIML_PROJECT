@@ -1,41 +1,65 @@
+# Movie Recommendation System – Content-Based Filtering
 
-# Movie Recommendation System
-
-This project is a simple **Content-Based Movie Recommender System** that suggests movies based on genre similarity using **TF-IDF vectorization** and **cosine similarity**. It includes a clean and interactive UI built using **Streamlit**.
+This project implements a content-based movie recommender system that suggests movies based on genre similarity. It uses TF-IDF vectorization and cosine similarity, and features a simple, interactive UI built with Streamlit.
 
 ---
 
 ## Project Objective
 
-> Suggest movies based on user preferences using machine learning techniques.
+To build a machine learning-based application that recommends similar movies based on user selection by analyzing movie genre metadata.
 
 ---
 
-## Tools & Technologies Used
+## Tools and Technologies
 
-- **Python**  
-- **Pandas**  
-- **Scikit-learn**  
-- **Streamlit**  
-- **MovieLens Dataset (movies.csv)**
+- Python  
+- Pandas  
+- Scikit-learn  
+- Streamlit  
+- MovieLens Dataset (`movies.csv`)
+
+---
+
+## Dataset Summary
+
+The system utilizes the `movies.csv` file from the MovieLens dataset. This file includes:
+- Movie titles  
+- Genre information  
 
 ---
 
-## How It Works
+## Workflow Overview
 
-1. **Dataset Used**  
-   - The project uses the MovieLens `movies.csv` dataset which contains movie titles and genre information.
+### 1. Data Preprocessing
+- Cleaned genre text by replacing pipe symbols (`|`) with spaces.
+- Applied TF-IDF vectorization to convert genre text into numerical feature vectors.
 
-2. **Data Preprocessing**  
-   - Cleaned genre strings (replaced `|` with space).  
-   - Applied **TF-IDF Vectorizer** to convert genre text into vectors.
-
-3. **Model Logic**  
-   - Calculated **cosine similarity** between movie vectors.  
-   - Used similarity scores to find the top 5 similar movies for any selected title.
-
-4. **User Interface (Streamlit App)**  
-   - Dropdown menu to select a movie.  
-   - A “Recommend” button shows the top 5 recommended movies.
+### 2. Similarity Computation
+- Calculated cosine similarity between all movie vectors.
+- Selected the top 5 most similar movies for any given title using similarity scores.
 
 ---
+
+## User Interface
+
+The front end is developed using Streamlit and includes the following features:
+- A dropdown menu to select a movie.
+- A “Recommend” button to generate suggestions.
+- Output: Top 5 genre-based recommended movies.
+
+---
+
+## Features
+
+- Efficient content-based filtering  
+- Lightweight and easy to deploy  
+- Minimal and user-friendly UI  
+
+---
+
+## How to Run the Application
+
+1. Install required packages:
+   ```bash
+   pip install pandas scikit-learn streamlit
+streamlit run app.py
