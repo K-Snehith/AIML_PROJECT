@@ -29,14 +29,14 @@ This project implements a real-time sign language recognition system using Pytho
 - NumPy, Scikit-learn
 - pyttsx3 (optional for TTS)
 
-### 🗂 Dataset
+###  Dataset
 
 - **ASL Alphabet Dataset**
 - Training Folder: `asl_alphabet_train`
 - Testing Folder: `asl_alphabet_test`
 - Each class has 3000+ labeled images
 
-### ⚙️ How to Run
+### ⚙ How to Run
 
 1. Install dependencies:
 ```bash
