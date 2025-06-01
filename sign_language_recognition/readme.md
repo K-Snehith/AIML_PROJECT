@@ -29,27 +29,17 @@ This project implements a real-time sign language recognition system using Pytho
 - Each class contains 3000+ labeled images (200x200 pixels)
 
  Train the Model
-bash
-Copy
-Edit
-python train_model.py
-This creates:
+
 
 sign_language_model.h5 (model)
 
 classes.npy (label names)
 
-Step 3: Run Real-Time Prediction
-bash
-Copy
-Edit
+Run Real-Time Prediction
+
 python realtime_predict.py
 A webcam window will open and show real-time predictions of hand gestures.
 
-✅ Optional Features
-Combine predicted characters to form full words
-
-Use pyttsx3 to speak out the predicted text
 
 📊 Results
 Training Accuracy: ~99.8%
